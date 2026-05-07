@@ -30,4 +30,5 @@ while iteration < LIMIT:
     
 print(f"Game ended after {iteration} iterations")    
 plt.ioff()
-plt.show()
+plt.savefig("life_game.png") #saving final image state
+plt.close()
