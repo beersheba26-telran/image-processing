@@ -35,8 +35,8 @@ class TestImageInfo(TestCase):
         self.assertEqual(2, len(actual))
         self.assertEqual(4, actual[7][0])
         self.assertEqual(4, actual[9][0])
-        self.assertIsNotNone(actual[7][1])
-        self.assertIsNotNone(actual[9][1])
+        self.assertLess(actual[7][1], 0.5)
+        self.assertLess(actual[9][1], 0.5)  
     def test_bags_no_belong_persons(self):
         actual = self.testInfo.bagsPersons(0.05)  
         self.assertEqual(2, len(actual))
